@@ -46,24 +46,23 @@
 .first{
   display: flex;
   flex-direction: row;
-  border:1px solid red;
-  width: 500px;
+
 }
 
 .dead{
   display:flex;
   flex-direction: column;
-  border: 1px solid blue;
+  border: 1px solid black;
   width: 20px;
   height: 20px;
-  background: black;
+  background: white;
 }
 
 .alive{
   display:flex;
   flex-direction: column;
-  border: 1px solid blue;
-  background: white;
+  border: 1px solid black;
+  background: orange;
   width: 20px;
   height: 20px;
 }
