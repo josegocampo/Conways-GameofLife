@@ -1,49 +1,24 @@
 .App {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .grid{
   margin: 0 auto;
+  width: 800px;
   border: 2px solid black;
-  max-width: 502px;
-  
+  margin-top: 80px;
+  background: black;
+  border-radius: 10px;
+
 }
-.first{
+.rows{
   display: flex;
   flex-direction: row;
 
@@ -52,17 +27,56 @@
 .dead{
   display:flex;
   flex-direction: column;
-  border: 1px solid black;
   width: 20px;
   height: 20px;
-  background: white;
+  background: black;
+  border-radius: 50%;
+
+
 }
 
 .alive{
   display:flex;
   flex-direction: column;
-  border: 1px solid black;
-  background: orange;
+  background: #84fff9;
   width: 20px;
   height: 20px;
+  border-radius: 50%;
+
+}
+
+.wtf{
+  display:flex;
+  flex-direction: column;
+  background: #ff7dff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.bro{
+  display:flex;
+  flex-direction: column;
+  background: #fff042;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.ble{
+  display:flex;
+  flex-direction: column;
+  background: #E91E63;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.color{
+  display:flex;
+  flex-direction: column;
+  background: #71ffaa;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
