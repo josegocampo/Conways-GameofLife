@@ -9,15 +9,17 @@
 }
 
 
+
+
+  
 .grid{
   margin: 0 auto;
-  width: 800px;
-  border: 2px solid black;
-  margin-top: 80px;
+  margin-top: 30px;
   background: black;
-  border-radius: 10px;
-
+  border: 1px double black;
+  border: 5px double black;
 }
+
 .rows{
   display: flex;
   flex-direction: row;
@@ -27,10 +29,10 @@
 .dead{
   display:flex;
   flex-direction: column;
-  width: 20px;
-  height: 20px;
-  background: black;
-  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: #272727;
+  border: 1px solid black;
 
 
 }
@@ -38,45 +40,46 @@
 .alive{
   display:flex;
   flex-direction: column;
-  background: #84fff9;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  background: #c5cbff;
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
+
 
 }
 
 .wtf{
   display:flex;
   flex-direction: column;
-  background: #ff7dff;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  background: #F6019D;
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
 }
 
 .bro{
   display:flex;
   flex-direction: column;
-  background: #fff042;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  background: #FF6C11;
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
 }
 
 .ble{
   display:flex;
   flex-direction: column;
-  background: #E91E63;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  background: #FF3864;
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
 }
 
 .color{
   display:flex;
   flex-direction: column;
-  background: #71ffaa;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  background: #2DE2E6;
+  width: 12px;
+  height: 12px;
+  border: 1px solid black;
 }
