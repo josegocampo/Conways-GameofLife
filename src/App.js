@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useRef } from 'react';
 import produce from 'immer';
 import './App.css';
+import conway from './conway.png'
 import styled from "styled-components";
 
 
@@ -24,9 +25,7 @@ for (let i = 0; i < rowNum; i++) {
 }
 
 const App = () => {
-    const Back = styled.div`
-   
-    `
+  
 
     const Main = styled.div`
     margin: 0 auto;
@@ -46,24 +45,50 @@ const App = () => {
     align-items: center;
     `
     const Rules = styled.div`
-    margin: 0 auto;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    margin-bottom: 200px;
-    padding-left: 40px;
     font-size: 0.7rem;
-    letter-spacing: 0.8px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 20px;
     `
     const Tittle = styled.div`
     display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    justify-content: space-around;
+    flex-direction: column;
     color: #ff7575;
+    margin-top: 50px;
+    align-items: flex-end;
+    `
+
+    const Top = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    margin-bottom: 20px;
+
+    `
+
+    const Big = styled.div`
+    font-size: 30px;
+    font-weight: 300;
+    color: black;
+    `
+
+    const BigSmall = styled.div`
+    font-size: 28px;
+    font-weight: 600;
+    `
+    const Anios = styled.div`
+    margin-top: 25px;
+    font-size: 0.9rem;
+    
+    `
+
+    const Small = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: grey;
     `
     
     const Buttons = styled.div`
@@ -72,18 +97,16 @@ const App = () => {
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 200px;
+    margin-bottom: 55px;
     `
     
     const Button = styled.button`
-    width: 80px; 
-    height: 30px;
-    border: 1px solid #ffa8ff;
-    background: #bbdcff;
-    color: black;
-    font-weight: 600;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    width: 90px; 
+    height: 25px;
+    border-radius: 5px
+    background: white;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
 
     `
  
@@ -155,13 +178,21 @@ for (let i = 0; i < rowNum; i++) {
 
 
 return (
-<Back>
+<div className="App">
    <Main>
       <Orden> 
           
          <Tittle>
-             <h1>Conway's Game of Life</h1>
+             <Top>
+               <Big className="pixel">El Juego de la Vida</Big>
+               <a href="www.google.com"><BigSmall className="titu2">de Conway</BigSmall></a>
+             </Top>
          </Tittle>
+         <Rules className="rules">
+         Cada bloque es una celula. Puedes elegir donde parten celulas vivas. Cada celula tiene como vecinos los bloques adyacentes. Las celulas negras estan muertas. Las celulas de colores estan vivas.
+         Si una celula muerta tiene 3 vecinos cobrará vida. Si una celula viva tiene menos de 2 vecinos morira de soledad. 
+         Si una celula viva tiene mas de 3 vecinos morira de sobrepoblación.
+        </Rules>
         <div className="grid">
     
           {nest.map((row, ix1) => (
@@ -181,7 +212,7 @@ return (
                       }
                     })
                     setNest(newNest)
-                  } : null} className={cell === 0 ? "dead" : cell > 0.8 ? "bro" : cell > 0.6 ? "color": cell > 0.4 ? "wtf" : cell > 0.2? "alive" : "ble"} />
+                  } : null} className={cell === 0 ? "dead" : cell > 0.9 ? "alive" : cell > 0.7 ? "wtf" : "ble"} />
                     
               ))}
             </div>
@@ -189,40 +220,33 @@ return (
           )
           )}
         </div>
-        <h1>Years since Big Bang: {countRef.current}</h1>
-        <Buttons className="buttons">
+        <Anios>GENERACIONES: {countRef.current}</Anios>
+        <Buttons>
           <Button
             onClick={() => {
               setRunning(!running)
               runningRef.current = true
               simulate()
             }
-              }>
-            {running ? "Stop" : "Start"}
+              } className="buttons">
+            {running ? "Parar" : "Empezar"}
           </Button>
-          <Button onClick={() => resetStuff()} >Reset</Button>
-          <Button onClick={() => setNest(randomRows)}>Azar</Button>
-          <Button onClick={() => speed > 4000 ? null : setSpeed(speed + 200)}>+Lento</Button>
-          <Button onClick={() => speed < 300 ? null : setSpeed(speed - 200)}>+Rapido</Button>
+          <Button onClick={() => resetStuff()} className="buttons">Reiniciar</Button>
+          <Button onClick={() => setNest(randomRows)} className="buttons">Azar</Button>
+          <Button onClick={() => speed > 4000 ? null : setSpeed(speed + 200)} className="buttons">+Lento</Button>
+          <Button onClick={() => speed < 300 ? null : setSpeed(speed - 200)} className="buttons">+Rapido</Button>
         </Buttons>
     
       </Orden>
-      <Rules>
-        <h2>The Rules:</h2>
-         <h3>Every circle is a cell</h3>
-         <h3>Black cells are dead</h3>
-         <h3>Colored cells are alive</h3>
-         <h3>If a dead cell has 3 neighbours it will come to life</h3>
-         <h3>If a live cell has less than 2 neighbours, it will die of solitude</h3>
-         <h3>If a live cell has more than 3 neighbours, it will die of overcrowding</h3>
-        </Rules>
+
   
   
   
     
   
    </Main>
-</Back>
+   <Small className="rip">R.I.P. John Conway<a href="https://es.wikipedia.org/wiki/John_Horton_Conway" className="link"><img src={conway} className="conway"/></a></Small>
+</div>
 
 )
             }

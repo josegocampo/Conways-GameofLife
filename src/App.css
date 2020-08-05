@@ -1,6 +1,18 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monofett&family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap');
 
+A {text-decoration: none;}
+
+.App {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -8,13 +20,32 @@
   color: #61dafb;
 }
 
+.pixel{
+  font-family: 'Press Start 2P', cursive;
+}
+
+.conway{
+  width: 50px;
+  margin-left: 20px;
+}
+
+.rip{
+  font-family: 'Exo', sans-serif;
+}
+.link{
+  text-decoration: none;
+  color: darkblue;
+}
+
+.titu2{
+  color: #d26579;
+  font-family: 'La Belle Aurore', cursive;
 
 
-
+}
   
 .grid{
   margin: 0 auto;
-  margin-top: 30px;
   background: black;
   border: 1px double black;
   border: 5px double black;
@@ -40,18 +71,16 @@
 .alive{
   display:flex;
   flex-direction: column;
-  background: #c5cbff;
+  background: #F6019D;
   width: 12px;
   height: 12px;
   border: 1px solid black;
-
-
 }
 
 .wtf{
   display:flex;
   flex-direction: column;
-  background: #F6019D;
+  background: #2DE2E6;
   width: 12px;
   height: 12px;
   border: 1px solid black;
@@ -60,7 +89,7 @@
 .bro{
   display:flex;
   flex-direction: column;
-  background: #FF6C11;
+  background: #c5cbff;
   width: 12px;
   height: 12px;
   border: 1px solid black;
@@ -69,7 +98,7 @@
 .ble{
   display:flex;
   flex-direction: column;
-  background: #FF3864;
+  background: #c5cbff;
   width: 12px;
   height: 12px;
   border: 1px solid black;
@@ -82,4 +111,9 @@
   width: 12px;
   height: 12px;
   border: 1px solid black;
+}
+
+
+.buttons{
+  font-family: 'Open Sans', sans-serif;
 }
