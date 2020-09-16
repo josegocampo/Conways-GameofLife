@@ -26,89 +26,6 @@ for (let i = 0; i < rowNum; i++) {
 
 const App = () => {
   
-
-    const Main = styled.div`
-    margin: 0 auto;
-    display: flex;
-    width: 1000px;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    `
-
-    const Orden = styled.div`
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    `
-    const Rules = styled.div`
-    font-size: 0.7rem;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-bottom: 20px;
-    `
-    const Tittle = styled.div`
-    display: flex;
-    flex-direction: column;
-    color: #ff7575;
-    margin-top: 50px;
-    align-items: flex-end;
-    `
-
-    const Top = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;  
-    margin-bottom: 20px;
-
-    `
-
-    const Big = styled.div`
-    font-size: 30px;
-    font-weight: 300;
-    color: black;
-    `
-
-    const BigSmall = styled.div`
-    font-size: 28px;
-    font-weight: 600;
-    `
-    const Anios = styled.div`
-    margin-top: 25px;
-    font-size: 0.9rem;
-    
-    `
-
-    const Small = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 0.7rem;
-    font-weight: 500;
-    color: grey;
-    `
-    
-    const Buttons = styled.div`
-    margin: 0 auto;
-    width: 70%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 55px;
-    `
-    
-    const Button = styled.button`
-    width: 90px; 
-    height: 25px;
-    border-radius: 5px
-    background: white;
-    font-size: 0.7rem;
-    letter-spacing: 0.5px;
-
-    `
  
   const randomRows = []
 for (let i = 0; i < rowNum; i++) {
@@ -240,16 +157,110 @@ return (
       </Orden>
 
   
-  
-  
-    
-  
    </Main>
    <Small className="rip">R.I.P. John Conway<a href="https://es.wikipedia.org/wiki/John_Horton_Conway" className="link"><img src={conway} className="conway"/></a></Small>
 </div>
 
 )
             }
+
+
+
+const Main = styled.div`
+margin: 0 auto;
+display: flex;
+width: 1000px;
+justify-content: center;
+flex-direction: row;
+align-items: center;
+@media ${device.tablet}{
+  max-width: 628px;
+}
+@media ${device.mobileL}{
+  max-width: 468px;
+}
+@media ${device.mobileM}{
+  max-width: 372px;
+}
+@media ${device.mobileS}{
+  max-width: 365px;
+}
+
+`
+
+const Orden = styled.div`
+margin: 0 auto;
+width: 80%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+`
+const Rules = styled.div`
+font-size: 0.7rem;
+padding-left: 50px;
+padding-right: 50px;
+margin-bottom: 20px;
+`
+const Tittle = styled.div`
+display: flex;
+flex-direction: column;
+color: #ff7575;
+margin-top: 50px;
+align-items: flex-end;
+`
+
+const Top = styled.div`
+display: flex;
+flex-direction: column;
+align-items: flex-end;  
+margin-bottom: 20px;
+
+`
+
+const Big = styled.div`
+font-size: 30px;
+font-weight: 300;
+color: black;
+`
+
+const BigSmall = styled.div`
+font-size: 28px;
+font-weight: 600;
+`
+const Anios = styled.div`
+margin-top: 25px;
+font-size: 0.9rem;
+
+`
+
+const Small = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+font-size: 0.7rem;
+font-weight: 500;
+color: grey;
+`
+
+const Buttons = styled.div`
+margin: 0 auto;
+width: 70%;
+margin-top: 30px;
+display: flex;
+justify-content: space-around;
+margin-bottom: 55px;
+`
+
+const Button = styled.button`
+width: 90px; 
+height: 25px;
+border-radius: 5px
+background: white;
+font-size: 0.7rem;
+letter-spacing: 0.5px;
+
+`
 
 export default App;
 
