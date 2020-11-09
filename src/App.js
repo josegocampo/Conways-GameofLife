@@ -173,20 +173,21 @@ width: 1000px;
 justify-content: center;
 flex-direction: row;
 align-items: center;
-@media ${device.tablet}{
-  max-width: 628px;
-}
-@media ${device.mobileL}{
-  max-width: 468px;
-}
-@media ${device.mobileM}{
-  max-width: 372px;
-}
-@media ${device.mobileS}{
-  max-width: 365px;
-}
+
 
 `
+// @media ${device.tablet}{
+//   max-width: 628px;
+// }
+// @media ${device.mobileL}{
+//   max-width: 468px;
+// }
+// @media ${device.mobileM}{
+//   max-width: 372px;
+// }
+// @media ${device.mobileS}{
+//   max-width: 365px;
+// }
 
 const Orden = styled.div`
 margin: 0 auto;
